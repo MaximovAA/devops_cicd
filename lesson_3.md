@@ -10,6 +10,8 @@
 6. Зайдите под admin\admin, поменяйте пароль на свой.
 7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
+   
+![sec](https://github.com/MaximovAA/school/blob/main/9_setup.jpg "Пример вывода команд")
 
 ## Знакомоство с SonarQube
 
@@ -24,6 +26,10 @@
 7. Исправьте ошибки, которые он выявил, включая warnings.
 8. Запустите анализатор повторно — проверьте, что QG пройдены успешно.
 9. Сделайте скриншот успешного прохождения анализа, приложите к решению ДЗ.
+    
+![sec](https://github.com/MaximovAA/school/blob/main/9_sonar_sample.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/9_sonar_err.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/9_passed.jpg "Пример вывода команд")
 
 ## Знакомство с Nexus
 
@@ -41,6 +47,24 @@
 3. Проверьте, что все файлы загрузились успешно.
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
 
+```xml
+<metadata modelVersion="1.1.0">
+<groupId>netology</groupId>
+<artifactId>java</artifactId>
+<versioning>
+<latest>8_282</latest>
+<release>8_282</release>
+<versions>
+<version>8_102</version>
+<version>8_282</version>
+</versions>
+<lastUpdated>20231109173403</lastUpdated>
+</versioning>
+</metadata>
+```
+
+![sec](https://github.com/MaximovAA/school/blob/main/9_nexus.jpg "Пример вывода команд")
+
 ### Знакомство с Maven
 
 ### Подготовка к выполнению
@@ -50,6 +74,35 @@
 3. Удалите из `apache-maven-<version>/conf/settings.xml` упоминание о правиле, отвергающем HTTP- соединение — раздел mirrors —> id: my-repository-http-unblocker.
 4. Проверьте `mvn --version`.
 5. Заберите директорию [mvn](./mvn) с pom.
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.netology.app</groupId>
+  <artifactId>simple-app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+   <repositories>
+    <repository>
+      <id>my-repo</id>
+      <name>maven-public</name>
+      <url>http://158.160.124.168:8081/#browse/browse:maven-public:netology%2Fjava%2F8_282</url>
+    </repository>
+  </repositories>
+  <dependencies>
+<!--     <dependency>
+      <groupId>somegroup</groupId>
+      <artifactId>someart</artifactId>
+      <version>somevers</version>
+      <classifier>someclass</classifier>
+      <type>sometype</type>
+    </dependency> -->
+  </dependencies>
+</project>
+```
+
+
+![sec](https://github.com/MaximovAA/school/blob/main/9_maven.jpg "Пример вывода команд")
 
 ### Основная часть
 
