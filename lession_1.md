@@ -19,6 +19,8 @@
 6. On test -> On fix, Done.
 7. Done -> Closed, Open.
 
+![sec](https://github.com/MaximovAA/school/blob/main/07_bug.jpg "Пример вывода команд")
+
 Остальные задачи должны проходить по упрощённому workflow:
 
 1. Open -> On develop.
@@ -26,6 +28,8 @@
 3. Done develop -> On test.
 4. On test -> On develop, Done.
 5. Done -> Closed, Open.
+
+![sec](https://github.com/MaximovAA/school/blob/main/07_other.jpg "Пример вывода команд")
 
 **Что нужно сделать**
 
@@ -35,5 +39,9 @@
 1. Верните задачи в статус Open.
 1. Перейдите в Scrum, запланируйте новый спринт, состоящий из задач эпика и одного бага, стартуйте спринт, проведите задачи до состояния Closed. Закройте спринт.
 2. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
+
+
+!(https://github.com/MaximovAA/school/blob/main/07_bug.xml "Пример вывода команд")
+!(https://github.com/MaximovAA/school/blob/main/07_other.xml "Пример вывода команд")
 
 ---
