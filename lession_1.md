@@ -41,7 +41,7 @@
 2. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
 
 
-!(https://github.com/MaximovAA/school/blob/main/07_bug.xml "Пример вывода команд")
-!(https://github.com/MaximovAA/school/blob/main/07_other.xml "Пример вывода команд")
+[bug.xml](https://github.com/MaximovAA/school/blob/main/07_bug.xml "Пример вывода команд")
+[other.xml](https://github.com/MaximovAA/school/blob/main/07_other.xml "Пример вывода команд")
 
 ---
