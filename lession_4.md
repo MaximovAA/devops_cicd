@@ -25,7 +25,7 @@
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
     [Jenkinsfile](https://github.com/MaximovAA/school/blob/main/Jenkinsfile)
    [ScriptedJenkinsfile](https://github.com/MaximovAA/school/blob/main/ScriptedJenkinsfile)
-    ```
+```
 Molecule test упорно не хочет выполняться на агенте, заменив его на любую команду баш или ансибл можно сделать все джобы "зелеными" но оставил как есть.
 
 pipeline {
@@ -45,7 +45,7 @@ pipeline {
         }
     }
 }
-    ```
+```
 
   ![screen](https://github.com/MaximovAA/school/blob/main/9.1freestyle1.jpg)  
   ![screen](https://github.com/MaximovAA/school/blob/main/9.1freestyle2.jpg)  
