@@ -54,8 +54,8 @@ pipeline {
   ![screen](https://github.com/MaximovAA/school/blob/main/9.1DeclarativeSCM2.jpg)  
   ![screen](https://github.com/MaximovAA/school/blob/main/9.1parametrs.jpg)  
   ![screen](https://github.com/MaximovAA/school/blob/main/9.1prode_run1.jpg)  
-  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent.jpg)  
-  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent2.jpg)
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1ansible.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1ansible2.jpg)
 ## Необязательная часть
 
 1. Создать скрипт на groovy, который будет собирать все Job, завершившиеся хотя бы раз неуспешно. Добавить скрипт в репозиторий с решением и названием `AllJobFailure.groovy`.
