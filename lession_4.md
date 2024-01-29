@@ -7,6 +7,11 @@
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
 
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1install.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1start.jpg)  
+  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent2.jpg)
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
@@ -18,7 +23,39 @@
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
+    [Jenkinsfile](https://github.com/MaximovAA/school/blob/main/Jenkinsfile)
+   [ScriptedJenkinsfile](https://github.com/MaximovAA/school/blob/main/ScriptedJenkinsfile)
+    ```
+Molecule test упорно не хочет выполняться на агенте, заменив его на любую команду баш или ансибл можно сделать все джобы "зелеными" но оставил как есть.
 
+pipeline {
+    agent {
+        label 'ansible'
+    }
+    stages {
+        stage (first) {
+            steps {
+                sh 'echo "molecule"'
+            }
+        }
+        stage (second) {
+            steps {
+                sh "molecule test"
+            }
+        }
+    }
+}
+    ```
+
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1freestyle1.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1freestyle2.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1declarative.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1DeclarativeSCM.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1DeclarativeSCM2.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1parametrs.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1prode_run1.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent.jpg)  
+  ![screen](https://github.com/MaximovAA/school/blob/main/9.1agent2.jpg)
 ## Необязательная часть
 
 1. Создать скрипт на groovy, который будет собирать все Job, завершившиеся хотя бы раз неуспешно. Добавить скрипт в репозиторий с решением и названием `AllJobFailure.groovy`.
